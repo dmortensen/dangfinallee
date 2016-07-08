@@ -13,6 +13,7 @@ Dang/Lee Wedding site
 ## Components
 - [ ] Drop down menu
 - [ ] Scroll revealing timeline
+- [ ] Countdown (on homepage)
 
 
 # Extras
