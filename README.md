@@ -12,4 +12,9 @@ Dang/Lee Wedding site
 
 ## Components
 - [ ] Drop down menu
-- [ ] Timeline
+- [ ] Scroll revealing timeline
+
+
+# Extras
+- This site requires Ruby and Sass to be installed on your computer for [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass).
+- You can Live Reload the page by adding an extension to [Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en);
