@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
     clean: {
         build: {
-          src: ['./dist/styles/', './dist/scripts/']
+          src: ['./dist/styles/*', './dist/scripts/*']
         }
     },
 
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: [{
-          './dist/styles/main.css': './src/scss/main.scss',
+          './dist/styles/main.built.css': './src/scss/main.scss',
         }]
       },
       debug: {
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
           lineNumbers: true
         },
         files: [{
-          './dist/styles/main.css': './src/scss/main.scss',
+          './dist/styles/main.built.css': './src/scss/main.scss',
         }]
       }
     },
@@ -65,42 +65,33 @@ module.exports = function(grunt) {
       }
     },
 
-    // browserify: {
-    //   options: {
-    //     external: [],
-    //     alias: []
-    //   },
-    //   dist: {
-    //     options: {
-    //       postBundleCB: function (err, src, next) {
-    //         next(err, BANNER + src);
-    //       }
-    //     },
-    //     files: [{
-    //       expand: true,
-    //       cwd: './src/js/',
-    //       src: '**/main.js',
-    //       dest: './../../../v/mac-mini/' + vVersion + '/scripts/',
-    //       rename: function (dest, src) {
-    //         return dest + src.replace(/^([^\/]*)\/main.js/, '$1.built.js');
-    //       }
-    //     }]
-    //   },
-    //   debug: {
-    //     options: {
-    //       debug: true
-    //     },
-    //     files: [{
-    //       expand: true,
-    //       cwd: './src/js/',
-    //       src: '**/main.js',
-    //       dest: './dist/scripts/',
-    //       rename: function (dest, src) {
-    //         return dest + src.replace(/^([^\/]*)\/main.js/, '$1.built.js');
-    //       }
-    //     }]
-    //   }
-    // },
+    browserify: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: './src/js/',
+          src: '*.js',
+          dest: './dist/scripts/',
+          rename: function (dest, src) {
+            return dest + src.replace(/^([^\/]*)\/*.js/, '$1.built.js');
+          }
+        }]
+      },
+      debug: {
+        options: {
+          debug: true
+        },
+        files: [{
+          expand: true,
+          cwd: './src/js/',
+          src: '*.js',
+          dest: './dist/scripts/',
+          rename: function (dest, src) {
+            return dest + src.replace(/^([^\/]*)\/*.js/, '$1.built.js');
+          }
+        }]
+      }
+    },
 
     watch: {
       options: {
@@ -120,6 +111,13 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['./dist/styles/*.css'],
+      },
+      js_build: {
+        files: ['./src/js/*.js'],
+        tasks: ['browserify:debug']
+      },
+      js: {
+        files: ['./dist/scripts/*.js']
       }
     }
   });
@@ -132,7 +130,7 @@ module.exports = function(grunt) {
     'clean',
     'sass:dist',
     'autoprefixer:dist',
-    // 'browserify:dist'
+    'browserify:dist'
   ]);
 
 
@@ -141,7 +139,8 @@ module.exports = function(grunt) {
     'clean',
     'sass:debug',
     'autoprefixer:debug',
-    // 'browserify:debug'
+    'browserify:debug',
+    'watch'
   ]);
 
 };
