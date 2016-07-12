@@ -6,7 +6,7 @@ var Main = (function() {
 	return {
 
 		initialize : function() {
-			console.log('countdown');
+			// Feature detect
 
 			return this;
 		}
