@@ -3,5 +3,8 @@
 // ============================================
 
 // Typography
-$font-family-sans-serif:  "Ropa Sans", $font-family-sans-serif;
-$font-family-serif:  "Cardo", $font-family-serif;
+$font-family-sans-serif: "Ropa Sans", Helvetica, Arial, sans-serif;
+$font-family-serif: "Cardo", "Times New Roman", Times, serif;
+
+$headings-font-family: $font-family-serif;
+$body-font-family: $font-family-sans-serif;

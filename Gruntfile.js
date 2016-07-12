@@ -31,6 +31,7 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           './dist/styles/main.built.css': './src/scss/main.scss',
+          './dist/styles/entourage.built.css': './src/scss/entourage.scss'
         }]
       },
       debug: {
@@ -40,6 +41,7 @@ module.exports = function(grunt) {
         },
         files: [{
           './dist/styles/main.built.css': './src/scss/main.scss',
+          './dist/styles/entourage.built.css': './src/scss/entourage.scss'
         }]
       }
     },
@@ -54,13 +56,13 @@ module.exports = function(grunt) {
       },
       dist: {
         files: [{
-          src: './dist/styles/main.built.css',
+          src: './dist/styles/*.built.css',
           dest: this.src
         }]
       },
       debug: {
         files: [{
-          src: './dist/styles/main.built.css',
+          src: './dist/styles/*.built.css',
           dest: this.src
         }]
       }
