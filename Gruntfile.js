@@ -6,12 +6,25 @@ module.exports = function(grunt) {
 
     clean: {
         build: {
-          src: ['./dist/styles/*', './dist/scripts/*']
+          src: ['./dist/styles/*', './dist/scripts/*.built.js']
         }
+    },
+
+    copy: {
+      fonts: {
+        files: [{
+          expand: true,
+          cwd: './node_modules/bootstrap-sass/assets/fonts/',
+          src: ['bootstrap/*'],
+          dest: './dist/fonts/',
+          filter: 'isFile'
+        }]
+      }
     },
 
     sass: {
       options: {
+        loadPath: ['./node_modules/bootstrap-sass/assets/stylesheets/', './node_modules/bootstrap-sass/assets/fonts/'],
         style: 'compressed',
         'sourcemap=none': true,
       },
@@ -41,13 +54,13 @@ module.exports = function(grunt) {
       },
       dist: {
         files: [{
-          src: './dist/styles/main.css',
+          src: './dist/styles/main.built.css',
           dest: this.src
         }]
       },
       debug: {
         files: [{
-          src: './dist/styles/main.css',
+          src: './dist/styles/main.built.css',
           dest: this.src
         }]
       }
@@ -128,15 +141,16 @@ module.exports = function(grunt) {
   // Default/dist task
   grunt.registerTask('default', [
     'clean',
+    'copy',
     'sass:dist',
     'autoprefixer:dist',
     'browserify:dist'
   ]);
 
-
-  // Developer debug tasks
+  // Developer tasks
   grunt.registerTask('debug', [
     'clean',
+    'copy',
     'sass:debug',
     'autoprefixer:debug',
     'browserify:debug',
