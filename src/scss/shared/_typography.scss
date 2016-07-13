@@ -3,5 +3,22 @@
 // ============================================
 
 body {
-	font-family: $body-font-family;
+	font: 20px/23px $body-font-family;
+	color: $color-copy;
+
+	&.theme-dark {
+		color: $color-white;
+	}
+}
+
+.headline {
+	font-size: 63px;
+	line-height: 80px;
+	font-weight: normal;
+	text-align: center;
+	margin-bottom: 60px;
+
+	.theme-dark & {
+		color: $color-white;
+	}
 }

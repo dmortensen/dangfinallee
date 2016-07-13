@@ -2,9 +2,23 @@
 // Settings
 // ============================================
 
+// Colors
+$color-copy: #666666;
+$color-heading: #333333;
+$color-white: #ffffff;
+$color-green: #317067;
+
+
 // Typography
 $font-family-sans-serif: "Ropa Sans", Helvetica, Arial, sans-serif;
 $font-family-serif: "Cardo", "Times New Roman", Times, serif;
+$font-size-base: 20px;
+$line-height-base: 1.15; // 23/20
+
+$body-font-family: $font-family-sans-serif;
 
 $headings-font-family: $font-family-serif;
-$body-font-family: $font-family-sans-serif;
+$headings-color: $color-heading;
+
+// Buttons
+$btn-primary-bg: $color-green;
