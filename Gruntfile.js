@@ -30,8 +30,11 @@ module.exports = function(grunt) {
       },
       dist: {
         files: [{
-          './dist/styles/main.built.css': './src/scss/main.scss',
-          './dist/styles/entourage.built.css': './src/scss/entourage.scss'
+          expand: true,
+          cwd: './src/scss/',
+          src: ['*.scss'],
+          dest: './dist/styles',
+          ext: '.built.css'
         }]
       },
       debug: {
@@ -40,8 +43,11 @@ module.exports = function(grunt) {
           lineNumbers: true
         },
         files: [{
-          './dist/styles/main.built.css': './src/scss/main.scss',
-          './dist/styles/entourage.built.css': './src/scss/entourage.scss'
+          expand: true,
+          cwd: './src/scss/',
+          src: ['*.scss'],
+          dest: './dist/styles',
+          ext: '.built.css'
         }]
       }
     },
