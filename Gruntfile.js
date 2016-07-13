@@ -134,7 +134,7 @@ module.exports = function(grunt) {
         files: ['./dist/styles/*.css'],
       },
       js_build: {
-        files: ['./src/js/*.js'],
+        files: ['./src/js/*.js', './src/js/lib/*.js'],
         tasks: ['browserify:debug']
       },
       js: {
