@@ -1,4 +1,6 @@
   <nav class="navbar">
+    <input type="checkbox" class="navbar-state" checked /></input>
+    <div class="navbar-content">
       <ul>
         <li>
           <!--#if expr="$DOCUMENT_URI = '/index.html'" -->
@@ -50,4 +52,5 @@
           <!--#endif -->
         </li>
       </ul>
+    </div>
   </nav>
