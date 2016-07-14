@@ -1,0 +1,50 @@
+// ============================================
+// Page: Story
+// ============================================
+@import "shared/bootstrap-custom";
+
+.page-story {
+  @include background-cover('/dist/images/background_beach.jpg');
+
+  .row {
+    .sr & {
+      visibility: hidden;
+    }
+  }
+
+  .col {
+    &-sm-6,
+    &-box {
+      @include box-sizing(border-box);
+    }
+    &-box {
+      border: 3px solid #fff;
+      margin: 0 auto 54px;
+      padding: 24px 72px;
+      width: 100%;
+      max-width: 624px;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    &-left {
+      text-align: right;
+
+      p {
+        padding-right: 15px;
+      }
+    }
+
+    &-right {
+      p {
+        padding-left: 15px;
+      }
+    }
+  }
+
+  .label {
+    margin-bottom: 5px;
+  }
+}
