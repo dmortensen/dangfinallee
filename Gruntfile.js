@@ -120,7 +120,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       html: {
-        files: ['*.html'],
+        files: ['*.html', '**/*.html'],
       },
       sass: {
         options: {
