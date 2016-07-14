@@ -1,6 +1,12 @@
 # dangfinallee
 Dang/Lee Wedding site
 
+
+# Commands
+- `grunt`: production
+- `grunt debug`: development
+
+
 # Pages
 - [ ] Home
 - [ ] Wedding Day
@@ -12,13 +18,8 @@ Dang/Lee Wedding site
 
 ## Components
 - [ ] Drop down menu
-- [ ] Countdown (Home page)
-- [ ] Scroll revealing timeline (Story page)
-
-
-# Commands
-- `grunt`: production
-- `grunt debug`: development
+- [X] Countdown (Home page)
+- [X] Scroll revealing timeline (Story page)
 
 
 # Extras
