@@ -11,7 +11,16 @@
   @include background-cover('/dist/images/background_bigsurcliff.jpg');
 
   .clock {
-    font: 75px/98px $font-family-serif;
+    font: 41px/60px $font-family-serif;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 75px;
+      line-height: 98px;
+      margin-bottom: 65px;
+    }
+
   }
 
   .copy {
