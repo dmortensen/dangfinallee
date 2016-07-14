@@ -4,57 +4,62 @@
 @import "shared/bootstrap-custom";
 
 .page-entourage {
-	padding-top: 100px;
 
-	main {
-		max-width: 980px;
-		margin: 0 auto;
-		padding: 0 16px;
-	}
+  .hero {
+    padding-top: 100px;
+  }
 
-	h1 {
-		margin: 0 0 4px 3px;
-		font-family: $body-font-family;
-		font-size: 24px;
-		line-height: 1em;
-		font-weight: 600;
-		letter-spacing: -1px;
-	}
-	h2 {
-		margin: 0 0 16px 3px;
-		font-family: $body-font-family;
-		font-size: 20px;
-		color: #666;
-	}
-	p {
-		margin: 0 0 0 5px;
-		font-size: 18px;
-		line-height: 22px;
-	}
+  .container {
+    max-width: 980px;
+    margin: 0 auto 60px;
+  }
 
-	.section-entourage {
-		margin-bottom: 56px;
-	}
+  .headline {
+    margin: 0 auto 55px;
+  }
 
-	.entourage-reel {
-		margin-bottom: 44px;
+  h2 {
+    margin: 0 0 4px 3px;
+    font-family: $body-font-family;
+    font-size: 24px;
+    line-height: 1em;
+    font-weight: 600;
+  }
+  h3 {
+    margin: 0 0 16px 3px;
+    font-family: $body-font-family;
+    font-size: 20px;
+    color: #666;
+  }
+  p {
+    margin: 0 0 0 5px;
+    font-size: 18px;
+    line-height: 22px;
+  }
 
-		figure {
-			display: inline-block;
-			width: 182px;
-			height: 240px;
-			margin: 0 12px 0 0;
-			background-color: #cfcfcf;
+  .section-entourage {
+    margin-bottom: 56px;
+  }
 
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-	}
+  .entourage-reel {
+    margin-bottom: 44px;
 
-	.keyline {
-		margin-bottom: 22px;
-		width: 104px;
-		border-top: 2px solid #000;
-	}
+    figure {
+      display: inline-block;
+      width: 182px;
+      height: 240px;
+      margin: 0 12px 0 0;
+      background-color: #cfcfcf;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .keyline {
+    margin-bottom: 22px;
+    width: 104px;
+    border-top: 2px solid #000;
+  }
 }

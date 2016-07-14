@@ -3,22 +3,25 @@
 // ============================================
 
 body {
-	font: 20px/23px $body-font-family;
-	color: $color-copy;
+  color: $color-copy;
 
-	&.theme-dark {
-		color: $color-white;
-	}
+  &.theme-dark {
+    color: $color-white;
+  }
+}
+
+p {
+  font: 20px/23px $body-font-family;
 }
 
 .headline {
-	font-size: 63px;
-	line-height: 80px;
-	font-weight: normal;
-	text-align: center;
-	margin: 0 0 60px;
+  font-size: 63px;
+  line-height: 80px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0 0 60px;
 
-	.theme-dark & {
-		color: $color-white;
-	}
+  .theme-dark & {
+    color: $color-white;
+  }
 }
