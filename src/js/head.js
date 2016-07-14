@@ -1,16 +1,32 @@
 'use strict';
 
-var Main = (function() {
+var Main = (function () {
 
-	return {
+  return {
 
-		initialize : function() {
-			// Feature detect
+    initialize: function () {
+      this.htmlEl = document.documentElement;
 
-			return this;
-		}
+      var style = this.htmlEl.style;
+      var scrollRevealSupported = 'WebkitTransition' in style && 'WebkitTransform' in style ||
+      'transition' in style && 'transform' in style;
 
-	};
+      this._addTests({
+        'sr': scrollRevealSupported
+      })
+
+      return this;
+    },
+
+    _addTests: function (tests) {
+      for ( var attr in tests) {
+        if ( tests[attr] ) {
+          this.htmlEl.className += ' ' + attr;
+        }
+      }
+    }
+
+  };
 
 }());
 

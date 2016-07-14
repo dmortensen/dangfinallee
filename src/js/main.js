@@ -1,23 +1,32 @@
 'use strict';
 
 var Countdown = require('./lib/Countdown');
+var ScrollReveal = require('scrollreveal');
 
 var Main = (function() {
 
-	return {
+  return {
 
-		initialize : function() {
-			console.log('shared');
+    initialize: function() {
+      var sr = new ScrollReveal;
 
-			if(document.querySelector('.page-home')){
-				console.log('countdown');
-				var countdown = new Countdown(document.getElementById('clock'), '2016-10-01T16:30');
-			}
+      if ( document.querySelector('.page-home') ) {
+        var countdown = new Countdown( document.getElementById('clock'), '2016-10-01T16:30' );
+      }
 
-			return this;
-		}
+      if ( sr.isSupported() ) {
+        sr.reveal( '.row', {
+          delay: 200,
+          distance: '0',
+          easing: 'ease-out',
+          scale: 0.8
+        });
+      }
 
-	};
+      return this;
+    }
+
+  };
 
 }());
 
