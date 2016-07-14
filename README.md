@@ -17,7 +17,8 @@ Dang/Lee Wedding site
 - [ ] RSVP
 
 ## Components
-- [ ] Drop down menu
+- [ ] Navbar (drop down all viewports)
+  - [ ] Transformicons (Navicon)
 - [X] Countdown (Home page)
 - [X] Scroll revealing timeline (Story page)
 
