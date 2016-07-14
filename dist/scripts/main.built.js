@@ -915,7 +915,7 @@ var Main = (function() {
         var countdown = new Countdown( document.getElementById('clock'), '2016-10-01T16:30' );
       }
 
-      if ( sr.isSupported() ) {
+      if ( sr.isSupported() && document.querySelector('.page-story') ) {
         sr.reveal( '.row', {
           delay: 200,
           distance: '0',

@@ -3,8 +3,25 @@
 // ============================================
 @import "shared/bootstrap-custom";
 
+@mixin label-circle($side) {
+  content: '';
+  border: 3px solid #ffffff;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  #{$side}: 15px;
+  width: 14px;
+  height: 14px;
+}
+$paragraph-padding: 31px;
+
 .page-story {
   @include background-cover('/dist/images/background_beach.jpg');
+
+  .label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
 
   .row {
     .sr & {
@@ -13,7 +30,7 @@
   }
 
   .col {
-    &-sm-6,
+    &-xs-6,
     &-box {
       @include box-sizing(border-box);
     }
@@ -33,18 +50,22 @@
       text-align: right;
 
       p {
-        padding-right: 15px;
+        padding-right: $paragraph-padding;
+      }
+
+      .label:after {
+        @include label-circle(right);
       }
     }
 
     &-right {
       p {
-        padding-left: 15px;
+        padding-left: $paragraph-padding;
+      }
+
+      .label:before {
+        @include label-circle(left);
       }
     }
-  }
-
-  .label {
-    margin-bottom: 5px;
   }
 }
