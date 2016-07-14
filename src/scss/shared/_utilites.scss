@@ -4,6 +4,6 @@
 
 // Background-cover
 @mixin background-cover($image) {
-  background: url($image) no-repeat center center fixed;
+  background: url($image) no-repeat top center fixed;
   background-size: cover;
 }
