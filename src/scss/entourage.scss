@@ -4,18 +4,9 @@
 @import "shared/bootstrap-custom";
 
 .page-entourage {
-
-  .hero {
-    padding-top: 100px;
-  }
-
   .container {
     max-width: 980px;
     margin: 0 auto 60px;
-  }
-
-  .headline {
-    margin: 0 auto 55px;
   }
 
   h2 {
@@ -32,7 +23,7 @@
     color: #666;
   }
   p {
-    margin: 0 0 0 5px;
+    margin-bottom: 5px;
     font-size: 18px;
     line-height: 22px;
   }
@@ -59,7 +50,5 @@
 
   .keyline {
     margin-bottom: 22px;
-    width: 104px;
-    border-top: 2px solid #000;
   }
 }

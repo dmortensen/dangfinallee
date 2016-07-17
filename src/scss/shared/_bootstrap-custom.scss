@@ -10,12 +10,10 @@
 @import "settings";
 @import "typography";
 
-
 // Reset and dependencies
 @import "bootstrap/normalize";
 // @import "bootstrap/print";
 // @import "bootstrap/glyphicons";
-
 
 // Core CSS
 // @import "bootstrap/scaffolding";
@@ -25,7 +23,6 @@
 // @import "bootstrap/tables";
 // @import "bootstrap/forms";
 @import "bootstrap/buttons";
-
 
 // Components
 // @import "bootstrap/component-animations";
@@ -50,13 +47,11 @@
 // @import "bootstrap/wells";
 // @import "bootstrap/close";
 
-
 // Components w/ JavaScript
 // @import "bootstrap/modals";
 // @import "bootstrap/tooltip";
 // @import "bootstrap/popovers";
 // @import "bootstrap/carousel";
-
 
 // Utility classes
 @import "bootstrap/utilities";

@@ -1,6 +1,7 @@
 // ============================================
 // Project shared
 // ============================================
+
 main {
   padding: 76px 0; // 76px + 50px
 
@@ -18,6 +19,14 @@ p {
   text-transform: uppercase;
 }
 
+.keyline {
+  width: 104px;
+  border-top: 2px solid #000;
+
+  .theme-dark & {
+    border-color: #9e9e9e;
+  }
+}
 
 // Navbar
 .navbar {
@@ -26,7 +35,6 @@ p {
   z-index: 100;
   width: 100%;
 }
-
 .navbar-content {
   position: absolute;
   width: 100%;
@@ -35,12 +43,10 @@ p {
   background-color: $color-green;
   overflow: hidden;
   // transition: height .6s linear;
-
   ul {
     padding: 83px 0;
     list-style: none;
   }
-
   .navbar-link {
     font: 63px/85px $font-family-serif;
     color: $color-white;
@@ -53,13 +59,11 @@ p {
     }
   }
 }
-
 .navbar-state {
   position: absolute;
   right: 100px;
   z-index: 101;
 }
-
 .navbar-state:checked + .navbar-content {
   height: 50px;
   // transition: height .6s linear;

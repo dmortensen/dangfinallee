@@ -1,11 +1,7 @@
-// ============================================
-// Page: Home
-// ============================================
 @import "shared/bootstrap-custom";
 
-
 // ============================================
-// Page specific
+// Page: home
 // ============================================
 .page-home {
   @include background-cover('/dist/images/background_bigsurcliff.jpg');
@@ -26,5 +22,22 @@
   .copy {
     font-size: 32px;
     line-height: 36px;
+  }
+}
+
+// ============================================
+// Page: wedding-day
+// ============================================
+.page-wedding-day {
+  @include background-cover('/dist/images/background_terragallery.jpg');
+
+  .container {
+    max-width: 616px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .keyline {
+    margin: 2px auto 58px;
   }
 }
