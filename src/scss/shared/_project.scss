@@ -3,7 +3,7 @@
 // ============================================
 
 .main {
-  padding: 76px 0; // 76px + 50px
+  padding: 80px 0;
 
   @media (min-width: $screen-xs-min) {
     padding: 86px 0;
@@ -19,7 +19,12 @@ p {
 }
 
 .btn {
+  padding: 7px 16px;
   text-transform: uppercase;
+
+  @media (min-width: $screen-xs-min) {
+    padding: 17px 35px;
+  }
 }
 
 .keyline {
@@ -54,6 +59,8 @@ $navbutton-pos-top: 22px;
   z-index: 102;
   width: 40px;
   height: 40px;
+  background: transparent;
+  border: 0;
   appearance: none;
   outline: none;
 }
@@ -117,7 +124,7 @@ $navbutton-pos-top: 22px;
     color: $color-white;
     text-decoration: none;
 
-    @media (min-width: $screen-xs-min) {
+    @media (min-width: $screen-sm-min) {
       font-size: 63px;
       line-height: 85px;
     }
