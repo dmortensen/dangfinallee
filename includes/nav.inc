@@ -18,10 +18,10 @@
           <!--#endif -->
         </li>
         <li>
-          <!--#if expr="$DOCUMENT_URI = '/stay/index.html'" -->
-            <span class="navbar-link current" role="link" aria-disabled="true">Stay.</span>
+          <!--#if expr="$DOCUMENT_URI = '/hotel/index.html'" -->
+            <span class="navbar-link current" role="link" aria-disabled="true">Hotel.</span>
           <!--#else -->
-            <a class="navbar-link" href="/stay/" >Stay.</a>
+            <a class="navbar-link" href="/hotel/" >Hotel.</a>
           <!--#endif -->
         </li>
         <li>
