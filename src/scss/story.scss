@@ -8,7 +8,7 @@
   border: 3px solid #ffffff;
   border-radius: 100%;
   position: absolute;
-  top: 0;
+  top: 5px;
   #{$side}: 15px;
   width: 14px;
   height: 14px;
@@ -24,8 +24,16 @@ $paragraph-padding: 31px;
   }
 
   .row {
+    margin: 0;
+
     .scrollreveal & {
       visibility: hidden;
+    }
+
+    p {
+      @media (min-width: $screen-xs-min) {
+        margin-bottom: 42px;
+      }
     }
   }
 
@@ -43,6 +51,7 @@ $paragraph-padding: 31px;
     }
 
     &-left {
+      padding-left: 0;
       text-align: right;
 
       p {
@@ -55,6 +64,8 @@ $paragraph-padding: 31px;
     }
 
     &-right {
+      padding-right: 0;
+
       p {
         padding-left: $paragraph-padding;
       }

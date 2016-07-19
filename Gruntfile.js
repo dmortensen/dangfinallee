@@ -10,21 +10,9 @@ module.exports = function(grunt) {
         }
     },
 
-    copy: {
-      fonts: {
-        files: [{
-          expand: true,
-          cwd: './node_modules/bootstrap-sass/assets/fonts/',
-          src: ['bootstrap/*'],
-          dest: './dist/fonts/',
-          filter: 'isFile'
-        }]
-      }
-    },
-
     sass: {
       options: {
-        loadPath: ['./node_modules/bootstrap-sass/assets/stylesheets/', './node_modules/bootstrap-sass/assets/fonts/'],
+        loadPath: ['./node_modules/bootstrap-sass/assets/stylesheets/'],
         style: 'compressed',
         'sourcemap=none': true,
       },
@@ -149,7 +137,6 @@ module.exports = function(grunt) {
   // Default/dist task
   grunt.registerTask('default', [
     'clean',
-    'copy',
     'sass:dist',
     'autoprefixer:dist',
     'browserify:dist'
@@ -158,7 +145,6 @@ module.exports = function(grunt) {
   // Developer tasks
   grunt.registerTask('debug', [
     'clean',
-    'copy',
     'sass:debug',
     'autoprefixer:debug',
     'browserify:debug',

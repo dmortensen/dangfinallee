@@ -11,12 +11,7 @@ body {
 }
 
 p {
-  font: 14px/18px $body-font-family;
-
-  @media (min-width: $screen-xs-min) {
-    font-size: 20px;
-    line-height: 23px;
-  }
+  font: 20px/25px $body-font-family;
 }
 
 .headline {
