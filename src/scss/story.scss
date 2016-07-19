@@ -24,16 +24,12 @@ $paragraph-padding: 31px;
   }
 
   .row {
-    .sr & {
+    .scrollreveal & {
       visibility: hidden;
     }
   }
 
   .col {
-    &-xs-6,
-    &-box {
-      @include box-sizing(border-box);
-    }
     &-box {
       border: 3px solid #fff;
       margin: 0 auto 54px;

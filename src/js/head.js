@@ -12,7 +12,7 @@ var Main = (function () {
       'transition' in style && 'transform' in style;
 
       this._addTests({
-        'sr': scrollRevealSupported
+        'scrollreveal': scrollRevealSupported
       })
 
       return this;
