@@ -29,46 +29,99 @@ p {
 }
 
 // Navbar
+@mixin navbutton-line {
+  display: inline-block;
+  width: 24px;
+  height: 4px;
+  background: $color-white;
+}
+$navbutton-pos-right: 20px;
+$navbutton-pos-top: 22px;
+
 .navbar {
   position: absolute;
-  top: 0;
   z-index: 100;
   width: 100%;
+  height: 50px;
+}
+.navbar-state {
+  position: absolute;
+  top: $navbutton-pos-top - 17px;
+  right: $navbutton-pos-right - 8px;
+  z-index: 102;
+  width: 40px;
+  height: 40px;
+  appearance: none;
+  outline: none;
+}
+.navbar-button {
+  @include navbutton-line;
+  position: absolute;
+  top: $navbutton-pos-top;
+  right: $navbutton-pos-right;
+  z-index: 101;
+  transition: background .1s .3s ease;
+
+  &:before,
+  &:after {
+    @include navbutton-line;
+    position: absolute;
+    left: 0;
+    content: '';
+    transition: top .3s .3s ease, transform .3s ease;
+  }
+  &:before {
+    top: -8px;
+  }
+  &:after {
+    top: 8px;
+  }
+}
+.navbar-state:checked ~ .navbar-button {
+  background: transparent;
+  transition: background .1s .3s ease;
+
+  &:before,
+  &:after {
+    transform-origin: 50% 50%;
+    top:0;
+    transition: top .3s ease, transform .3s .3s ease;
+  }
+
+  &:before{
+    transform: rotate3d(0,0,1,45deg);
+  }
+  &:after{
+    transform: rotate3d(0,0,1,-45deg);
+  }
 }
 .navbar-content {
-  position: absolute;
   width: 100%;
-  height: 770px;
+  height: 50px;
   text-align: center;
-  background-color: $color-green;
+  background: $color-green;
   overflow: hidden;
-  // transition: height .6s linear;
+  transition: height .6s ease;
+  transform: translateZ(0);
+
   ul {
     padding: 83px 0;
     list-style: none;
   }
   .navbar-link {
+    display: block;
     font: 63px/85px $font-family-serif;
     color: $color-white;
     text-decoration: none;
 
-    &.current {
-      display: block;
-      background-color: $color-white;
+    &.current,
+    &:hover {
+      background: $color-white;
       color: $color-green;
     }
   }
 }
-.navbar-state {
-  position: absolute;
-  right: 100px;
-  z-index: 101;
-}
-.navbar-state:checked + .navbar-content {
-  height: 50px;
-  // transition: height .6s linear;
-
-  @media (min-width: $screen-sm-min) {
-    height: 0;
-  }
+.navbar-state:checked ~ .navbar-content {
+  height: 770px;
+  transition: height .6s ease;
 }

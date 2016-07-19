@@ -1,5 +1,6 @@
   <nav class="navbar">
-    <input type="checkbox" class="navbar-state" checked /></input>
+    <input type="checkbox" class="navbar-state" />
+    <div class="navbar-button"></div>
     <div class="navbar-content">
       <ul>
         <li>

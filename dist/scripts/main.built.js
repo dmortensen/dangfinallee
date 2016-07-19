@@ -909,12 +909,16 @@ var Main = (function() {
   return {
 
     initialize: function() {
-      var sr = new ScrollReveal;
+      // Reset checkbox to unchecked state (closed navbar) on page load
+      // Will set navbar to closed state when hitting back button
+      var checkbox = document.querySelector('.navbar-state');
+      checkbox.checked = false;
 
       if ( document.querySelector('.page-home') ) {
         var countdown = new Countdown( document.getElementById('clock'), '2016-10-01T16:30' );
       }
 
+      var sr = new ScrollReveal;
       if ( sr.isSupported() && document.querySelector('.page-story') ) {
         sr.reveal( '.row', {
           delay: 200,
