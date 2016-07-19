@@ -2,16 +2,20 @@
 // Project shared
 // ============================================
 
-main {
+.main {
   padding: 76px 0; // 76px + 50px
 
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: $screen-xs-min) {
     padding: 86px 0;
   }
 }
 
 p {
-  margin-bottom: 54px;
+  margin-bottom: 26px;
+
+  @media (min-width: $screen-xs-min) {
+    margin-bottom: 54px;
+  }
 }
 
 .btn {
@@ -109,9 +113,14 @@ $navbutton-pos-top: 22px;
   }
   .navbar-link {
     display: block;
-    font: 63px/85px $font-family-serif;
+    font: 46px/66px $font-family-serif;
     color: $color-white;
     text-decoration: none;
+
+    @media (min-width: $screen-xs-min) {
+      font-size: 63px;
+      line-height: 85px;
+    }
 
     &.current,
     &:hover {
@@ -121,6 +130,10 @@ $navbutton-pos-top: 22px;
   }
 }
 .navbar-state:checked ~ .navbar-content {
-  height: 770px;
+  height: 638px;
   transition: height .6s ease;
+
+  @media (min-width: $screen-xs-min) {
+    height: 770px;
+  }
 }

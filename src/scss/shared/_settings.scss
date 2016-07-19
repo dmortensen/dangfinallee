@@ -11,11 +11,14 @@ $color-green: #317067;
 // Typography
 $font-family-sans-serif: "Ropa Sans", Helvetica, Arial, sans-serif;
 $font-family-serif: "Lora", "Times New Roman", Times, serif;
-$font-size-base: 20px;
-$line-height-base: 1.15; // 23/20
+$font-size-base: 14px;
+$line-height-base: 1.29; // 18/14
 $body-font-family: $font-family-sans-serif;
 $headings-font-family: $font-family-serif;
 $headings-color: $color-heading;
+
+// Breakpoints
+$screen-xs-min: 320px;
 
 // Buttons
 $btn-primary-bg: $color-green;

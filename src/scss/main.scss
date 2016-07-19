@@ -11,7 +11,7 @@
     margin-bottom: 60px;
     text-transform: uppercase;
 
-    @media (min-width: $screen-sm-min) {
+    @media (min-width: $screen-xs-min) {
       font-size: 75px;
       line-height: 98px;
       margin-bottom: 65px;
@@ -22,6 +22,11 @@
   .copy {
     font-size: 32px;
     line-height: 36px;
+
+    @media (min-width: $screen-xs-min) {
+      font-size: 23px;
+      line-height: 32px;
+    }
   }
 }
 
@@ -38,6 +43,10 @@
   }
 
   .keyline {
-    margin: 2px auto 58px;
+    margin: 2px auto 32px;
+
+    @media (min-width: $screen-xs-min) {
+      margin-bottom: 58px;
+    }
   }
 }

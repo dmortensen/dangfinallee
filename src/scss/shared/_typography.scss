@@ -11,15 +11,26 @@ body {
 }
 
 p {
-  font: 20px/23px $body-font-family;
+  font: 14px/18px $body-font-family;
+
+  @media (min-width: $screen-xs-min) {
+    font-size: 20px;
+    line-height: 23px;
+  }
 }
 
 .headline {
-  font-size: 63px;
-  line-height: 80px;
+  font-size: 46px;
+  line-height: 58px;
   font-weight: normal;
   text-align: center;
-  margin: 0 0 60px;
+  margin: 0 0 36px;
+
+  @media (min-width: $screen-xs-min) {
+    font-size: 63px;
+    line-height: 80px;
+    margin-bottom: 60px;
+  }
 
   .theme-dark & {
     color: $color-white;
