@@ -16,7 +16,9 @@
 $paragraph-padding: 31px;
 
 .page-story {
-  @include background-cover('/dist/images/background_beach.jpg');
+  .main {
+    @include background-cover('/dist/images/background_beach.jpg');
+  }
 
   .label {
     font-weight: bold;
