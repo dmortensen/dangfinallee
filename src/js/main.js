@@ -14,7 +14,8 @@ var Main = (function() {
       checkbox.checked = false;
 
       if ( document.querySelector('.page-home') ) {
-        var countdown = new Countdown( document.getElementById('clock'), '2016-10-01T16:30' );
+        // Using GMT of date: Oct 1 @ 11:30pm GMT for accurate time difference
+        var countdown = new Countdown( document.getElementById('clock'), '2016-10-01T23:30' );
       }
 
       var sr = new ScrollReveal;
