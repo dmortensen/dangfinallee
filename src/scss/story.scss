@@ -20,6 +20,15 @@ $paragraph-padding: 31px;
     @include background-cover('/dist/images/background_beach.jpg');
   }
 
+  .story-hero {
+    @include img-responsive;
+    @include img-retina("/dist/images/entourage/matt_erica_highschool.jpg", "/dist/images/entourage/matt_erica_highschool_2x.jpg", 557px, 378px);
+    background-position: right center;
+    width: 557px;
+    height: 378px;
+    margin-bottom: 55px;
+  }
+
   .label {
     font-weight: bold;
     margin-bottom: 5px;
