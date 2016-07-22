@@ -6,12 +6,9 @@
 
 .page-entourage {
   .container {
+    width: 346px;
     max-width: 980px;
     margin: 0 auto 60px;
-
-    @media (min-width: $screen-xs-min) {
-      width: 346px;
-    }
 
     @media (min-width: $screen-sm-min) {
       width: 598px;
@@ -87,11 +84,10 @@
     background-color: #999;
 
     &.one {
-      @media (min-width: $screen-xs-min) {
-        width: 246px;
-        height: 322px;
-        background-size: 246px 322px;
-      }
+      width: 246px;
+      height: 322px;
+      background-size: 246px 322px;
+
       @media (min-width: $screen-sm-min) {
         width: 184px;
         height: 240px;
@@ -102,11 +98,10 @@
     &.three,
     &.four,
     &.five {
-      @media (min-width: $screen-xs-min) {
-        width: 116px;
-        height: 154px;
-        background-size: 116px 154px;
-      }
+      width: 116px;
+      height: 154px;
+      background-size: 116px 154px;
+
       @media (min-width: $screen-sm-min) {
         width: 184px;
         height: 240px;
