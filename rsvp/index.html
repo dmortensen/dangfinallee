@@ -8,6 +8,8 @@
 
   <!--#include virtual="/includes/head.inc"-->
   <link rel="stylesheet" href="/dist/styles/main.built.css" />
+  <script src="/src/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="/src/js/misc.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body class="page-rsvp">
@@ -18,7 +20,11 @@
     <header class="container">
       <h1 class="headline">RSVP.</h1>
     </header>
-	<div>Hello</div>
+	<div>
+		<input id="search" type="text" name="search">
+		<input type="button" name="lookup" value="Search" onClick=getList()>
+		<div id="party"></div>
+	</div>
 
   </main>
 
