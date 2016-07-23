@@ -6,6 +6,10 @@ body {
   min-width: 320px;
 }
 
+*:focus {
+  outline: none !important;
+}
+
 .main {
   position: relative;
   z-index: 1;

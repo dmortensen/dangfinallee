@@ -10,7 +10,9 @@ body {
   }
 }
 
-p {
+p,
+label,
+[type=text] {
   font: 20px/25px $body-font-family;
 }
 
