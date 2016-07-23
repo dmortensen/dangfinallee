@@ -2,7 +2,7 @@ function getList(){
 	var params = {};
 	params['key'] = $("#search").val();
 
-	list = $.post('../src/php/return_list.php', params, function(data){
+	list = $.post('/dist/scripts/php/return_list.php', params, function(data){
 		if(data.status == "Success"){
 			var result = data.result;
 			var html = '';
