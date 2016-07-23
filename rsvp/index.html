@@ -8,8 +8,6 @@
 
   <!--#include virtual="/includes/head.inc"-->
   <link rel="stylesheet" href="/dist/styles/rsvp.built.css" />
-  <script src="/dist/scripts/rsvp/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/dist/scripts/rsvp/misc.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body class="page-rsvp">
@@ -22,10 +20,12 @@
     </header>
 
     <section class="form container text-center">
-      <label for="search">Hi, my name is:</label>
-      <input id="search" class="underline" type="text" name="search" placeholder="your full name here" />.
+      <div class="form-content">
+        <label>Hi, my name is:</label>
+        <input class="fullname underline" type="text" name="fullname" placeholder="your full name here" />.
+      </div>
 
-      <div><button class="btn btn-primary" type="submit" name="lookup" onClick=getList()>Submit</button></div>
+      <div><button class="btn btn-primary" type="submit" name="lookup">Submit</button></div>
     </section>
 
   </main>

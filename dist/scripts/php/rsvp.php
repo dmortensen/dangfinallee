@@ -18,6 +18,6 @@ if(isset($_REQUEST['no']) && !empty(trim($_REQUEST['no']))){
 	}
 }
 
-echo json_encode(array('status' => 'Success'));
+echo json_encode(array('status' => 'success'));
 
 ?>

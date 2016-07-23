@@ -9,7 +9,7 @@ if(isset($_REQUEST['key'])){
 		for($i = 0;$i < count($guest_array);$i++){
 			foreach($guest_array[$i] as $guest){
 				if(trim(strtolower($key)) == trim(strtolower($guest))){
-					echo json_encode(array('status' => 'Success', 'result' => $guest_array[$i]));
+					echo json_encode(array('status' => 'success', 'result' => $guest_array[$i]));
 					exit;
 				}
 			}

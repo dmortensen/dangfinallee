@@ -2,6 +2,7 @@
 
 var Countdown = require('./lib/Countdown');
 var ScrollReveal = require('scrollreveal');
+var RSVP = require('./lib/RSVP');
 
 var Main = (function() {
 
@@ -26,6 +27,10 @@ var Main = (function() {
           easing: 'ease-out',
           scale: 0.8
         });
+      }
+
+      if ( document.querySelector('.page-rsvp') ) {
+        var rsvp = new RSVP();
       }
 
       return this;
