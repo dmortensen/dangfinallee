@@ -7,9 +7,9 @@
   <!--#include virtual="/includes/meta.content.inc"-->
 
   <!--#include virtual="/includes/head.inc"-->
-  <link rel="stylesheet" href="/dist/styles/main.built.css" />
+  <link rel="stylesheet" href="/dist/styles/rsvp.built.css" />
   <script src="/src/js/jquery.js" type="text/javascript" charset="utf-8"></script>
-<script src="/src/js/misc.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/src/js/misc.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body class="page-rsvp">
@@ -20,11 +20,13 @@
     <header class="container">
       <h1 class="headline">RSVP.</h1>
     </header>
-	<div>
-		<input id="search" type="text" name="search">
-		<input type="button" name="lookup" value="Search" onClick=getList()>
-		<div id="party"></div>
-	</div>
+
+    <section class="form container text-center">
+      <label for="search">Hi, my name is:</label>
+      <input id="search" class="underline" type="text" name="search" placeholder="your full name here" />.
+
+      <div><button class="btn btn-primary" type="submit" name="lookup" onClick=getList()>Submit</button></div>
+    </section>
 
   </main>
 
