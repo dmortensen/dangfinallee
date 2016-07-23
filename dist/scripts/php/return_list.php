@@ -2,10 +2,10 @@
 
 if(isset($_REQUEST['key'])){
 	$key = trim($_REQUEST['key']);
-	$guest_list = file_get_contents('../data/guest_list.json');
+	$guest_list = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/dist/data/guest_list.json');
 	if($guest_list !== FALSE){
 		$guest_array = json_decode($guest_list, true);
-		
+
 		for($i = 0;$i < count($guest_array);$i++){
 			foreach($guest_array[$i] as $guest){
 				if(trim(strtolower($key)) == trim(strtolower($guest))){

@@ -50,7 +50,7 @@ function rsvp(){
 	params['yes'] = yes;
 	params['no'] = no;
 
-	reserve = $.post('../src/php/rsvp.php', params, function(data){console.log(data);
+	reserve = $.post('/dist/scripts/php/rsvp.php', params, function(data){console.log(data);
 		if(data.status == "Success"){
 			html = '<p>Thank you!</p>';
 		}else{
