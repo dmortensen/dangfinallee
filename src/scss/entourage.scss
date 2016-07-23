@@ -2,11 +2,47 @@
 // Page: entourage
 // ============================================
 @import "shared/bootstrap-custom";
+@import "shared/entourage-images";
 
 .page-entourage {
   .container {
+    width: 376px;
     max-width: 980px;
     margin: 0 auto 60px;
+
+    @media (min-width: $screen-sm-min) {
+      width: 598px;
+    }
+
+    @media (min-width: $screen-md-min) {
+      width: 980px;
+    }
+  }
+
+  .float {
+    float: left;
+  }
+
+  .col-xs-3.col-xs-push-8 {
+    padding-left: 11px;
+
+    @media (min-width: $screen-sm-min) {
+      padding-left: 0;
+    }
+  }
+
+  .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding: 0;
+  }
+
+  .bio {
+    max-width: 980px;
+    padding-right: 12px;
+    padding-left: 10px;
+
+    @media (min-width: $screen-sm-min) {
+      padding-left: 0;
+    }
   }
 
   h2 {
@@ -24,31 +60,78 @@
   }
   p {
     margin-bottom: 5px;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 21px;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   .section-entourage {
     margin-bottom: 56px;
   }
 
-  .entourage-reel {
-    margin-bottom: 44px;
+  .keyline {
+    margin-bottom: 22px;
+  }
 
-    figure {
-      display: inline-block;
-      width: 182px;
-      height: 240px;
-      margin: 0 12px 0 0;
-      background-color: #cfcfcf;
+  .entourage-name {
+    padding-top: 18px;
+  }
 
-      &:last-child {
-        margin-right: 0;
-      }
+  .xs-hero {
+    width: auto !important;
+  }
+
+  .col-md-2 {
+    @media (min-width: $screen-sm-min) {
+      width: auto !important;
     }
   }
 
-  .keyline {
-    margin-bottom: 22px;
+  .col-md-5 {
+    @media (min-width: $screen-md-min) {
+      width: auto;
+    }
+  }
+
+  .image {
+    float: left;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 14px;
+    background-repeat: no-repeat;
+    background-color: #999;
+
+    &.one {
+      width: 246px;
+      height: 322px;
+      background-size: 246px 322px;
+
+      @media (min-width: $screen-sm-min) {
+        width: 184px;
+        height: 240px;
+        background-size: 184px 240px;
+      }
+    }
+    &.two,
+    &.three,
+    &.four,
+    &.five {
+      width: 116px;
+      height: 154px;
+      background-size: 116px 154px;
+
+      @media (min-width: $screen-sm-min) {
+        width: 184px;
+        height: 240px;
+        background-size: 184px 240px;
+      }
+    }
+    &.five {
+      margin-right: 0;
+    }
   }
 }

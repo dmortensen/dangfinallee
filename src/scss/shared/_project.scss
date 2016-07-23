@@ -11,7 +11,11 @@ body {
 }
 
 .main {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
   padding: 80px 0;
+  overflow: hidden;
 
   @media (min-width: $screen-xs-min) {
     padding: 86px 0;

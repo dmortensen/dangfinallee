@@ -4,7 +4,10 @@
 // Page: home
 // ============================================
 .page-home {
-  @include background-cover('/dist/images/background_bigsurcliff.jpg');
+
+  .main {
+    @include background-cover('/dist/images/background_bigsurcliff.jpg');
+  }
 
   .clock {
     font: 41px/60px $font-family-serif;
@@ -35,7 +38,9 @@
 // Page: wedding-day
 // ============================================
 .page-wedding-day {
-  @include background-cover('/dist/images/background_terragallery.jpg');
+  .main {
+    @include background-cover('/dist/images/background_terragallery.jpg');
+  }
 
   .keyline {
     margin: 2px auto 32px;
