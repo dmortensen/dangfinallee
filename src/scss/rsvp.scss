@@ -4,6 +4,24 @@
 @import "shared/bootstrap-custom";
 
 .page-rsvp {
+
+  .headline {
+    .eyebrow {
+      top: 3px;
+      left: 3px;
+
+      &.after {
+        top: -15px;
+      }
+    }
+    .headline-image {
+      @include img-retina("/dist/images/header_rsvp.png", "/dist/images/header_rsvp_2x.png", 402px, 137px);
+      width: 402px;
+      height: 137px;
+      background-size: 402px 137px;
+    }
+  }
+
   .btn {
     margin-top: 62px;
   }

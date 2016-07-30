@@ -4,6 +4,7 @@
 
 body {
   min-width: 320px;
+  -webkit-font-smoothing: antialiased;
 }
 
 *:focus {
@@ -18,7 +19,27 @@ body {
   overflow: hidden;
 
   @media (min-width: $screen-xs-min) {
-    padding: 86px 0;
+    padding: 96px 0;
+  }
+}
+
+.headline {
+  position: relative;
+  margin: 0 0 36px;
+
+  .eyebrow {
+    display: inline-block;
+    position: relative;
+  }
+
+  .headline-image {
+    display: block;
+    margin: 0 auto;
+    color: transparent;
+  }
+
+  @media (min-width: $screen-xs-min) {
+    margin-bottom: 60px;
   }
 }
 

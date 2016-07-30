@@ -20,6 +20,19 @@ $paragraph-padding: 31px;
     @include background-cover('/dist/images/background_beach.jpg');
   }
 
+  .headline {
+    .eyebrow {
+      top: 5px;
+      left: 10px;
+    }
+    .headline-image {
+      @include img-retina("/dist/images/header_story.png", "/dist/images/header_story_2x.png", 289px, 137px);
+      width: 289px;
+      height: 137px;
+      background-size: 289px 137px;
+    }
+  }
+
   .story-hero {
     @include img-responsive;
     @include img-retina("/dist/images/entourage/matt_erica_highschool.jpg", "/dist/images/entourage/matt_erica_highschool_2x.jpg", 557px, 378px);

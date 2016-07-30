@@ -17,17 +17,12 @@ label,
 }
 
 .headline {
-  font-size: 46px;
-  line-height: 58px;
+  font-family: "Lora", "Times New Roman", Times, serif;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
   font-weight: normal;
   text-align: center;
-  margin: 0 0 36px;
-
-  @media (min-width: $screen-xs-min) {
-    font-size: 63px;
-    line-height: 80px;
-    margin-bottom: 60px;
-  }
 
   .theme-dark & {
     color: $color-white;
