@@ -7,3 +7,17 @@
   background: url($image) no-repeat fixed top center;
   background-size: cover;
 }
+
+// Horizontal Center
+@mixin horizontal-center {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+// Center
+@mixin center {
+  margin-left: auto;
+  margin-right: auto;
+}

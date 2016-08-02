@@ -25,7 +25,8 @@ $paragraph-padding: 31px;
       top: 5px;
       left: 10px;
     }
-    .headline-image {
+
+    &-image {
       @include img-retina("/dist/images/header_story.png", "/dist/images/header_story_2x.png", 289px, 137px);
       width: 289px;
       height: 137px;
