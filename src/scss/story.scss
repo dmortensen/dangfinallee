@@ -53,12 +53,6 @@ $paragraph-padding: 31px;
     .scrollreveal & {
       visibility: hidden;
     }
-
-    p {
-      @media (min-width: $screen-xs-min) {
-        margin-bottom: 42px;
-      }
-    }
   }
 
   .col {
