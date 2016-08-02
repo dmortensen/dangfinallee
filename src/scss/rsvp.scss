@@ -33,11 +33,22 @@
 
   [type="text"] {
     border: 0;
+    border-radius: 0;
 
     &:after {
       content: '.';
       display: block;
     }
+  }
+
+  .underline {
+    border-bottom: 1px solid $color-copy;
+    padding: 0 5px 5px;
+    margin: 0 auto;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    max-width: 300px;
   }
 
   .dropdown {
@@ -49,11 +60,10 @@
     height: 26px;
 
     &:after {
+      border: 3px solid transparent;
+      border-top: 6px solid $color-white;
       content: '';
       display: inline-block;
-      border-left: 3px solid transparent;
-      border-right: 3px solid transparent;
-      border-top: 6px solid $color-white;
       position: absolute;
       top: 10px;
       right: 10px;
@@ -74,6 +84,9 @@
     }
   }
 
+  .form-content {
+    padding: 0 20px;
+  }
   .invitee {
     padding-bottom: 46px;
 
@@ -85,20 +98,19 @@
       }
     }
 
+    &:first-child {
+      .underline:before {
+        content: 'I,';
+        position: absolute;
+        left: -22px;
+      }
+    }
+
     &:last-child {
       .underline:after {
         content: '';
       }
     }
-  }
 
-  .underline {
-    border-bottom: 1px solid $color-copy;
-    padding-bottom: 5px;
-    margin: 0 auto;
-    position: relative;
-    text-align: left;
-    width: 100%;
-    max-width: 300px;
   }
 }
