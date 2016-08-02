@@ -11024,6 +11024,8 @@ proto._getList = function () {
     if ( data.status == 'success' ) {
       var result = data.result;
 
+      html += '<div class="invitees">';
+
       result.forEach( function( el, idx, array ) {
         html += '<div class="invitee">';
         html += '<label class="underline">' + el + '</label>';
@@ -11035,7 +11037,15 @@ proto._getList = function () {
         html += '</div></div>';
       });
 
+      html += '</div>';
       html += '<p>the festivities.</p>'
+
+      html += '<label>You\'ll find me on the dance floor when the DJ plays:</label>';
+      html += '<div class="text-nowrap"><input class="song underline" type="text" name="song" placeholder="song name" />.</div>';
+    } else if ( data.status == 'replied' ) {
+      html = '<p>Looks like you already RSVP\'d. See you Sat, Oct. 1st.</p>';
+      html += '<p>If you need to change your response, please email <a href="mailto:erica.dang@gmail.com">Erica</a>.</p>';
+      _this.submitBtn.style.display = 'none';
     } else {
       html = '<p>' + data.status + '</p>';
       _this.submitBtn.style.display = 'none';
@@ -11047,7 +11057,8 @@ proto._getList = function () {
 
 proto._rsvp = function () {
   var _this = this;
-  var rsvps = this.form.querySelectorAll( '.rsvp' );
+  var rsvps = [].slice.call(this.form.querySelectorAll( '.rsvp' ));
+  var song = this.form.querySelector( '.song' ).value;
   var params = {};
   var yes = '';
   var no = '';
@@ -11064,12 +11075,19 @@ proto._rsvp = function () {
   });
 
   // console.log("Yes: "+yes);
-  // console.log("No "+no);
+  // console.log("No: "+no);
+  // console.log("Song: "+song.value);
 
   params['yes'] = yes;
   params['no'] = no;
 
-  var reserve = Post( '/dist/scripts/php/rsvp.php', params, function ( data ) {
+  if (song !== '') {
+    params['song'] = song;
+  }
+
+  // console.log(params);
+
+  var reply = Post( '/dist/scripts/php/rsvp.php', params, function ( data ) {
     if ( data.status == 'success' ) {
       html = '<p>Thank you!</p>';
     } else {
@@ -11115,7 +11133,7 @@ var Main = (function() {
       }
 
       if ( document.querySelector('.page-rsvp') ) {
-        var rsvp = new RSVP( );
+        var rsvp = new RSVP();
       }
 
       return this;
