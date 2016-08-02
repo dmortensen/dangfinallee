@@ -15,6 +15,7 @@
       }
     }
     .headline-image {
+      @include horizontal-center;
       @include img-retina("/dist/images/header_rsvp.png", "/dist/images/header_rsvp_2x.png", 402px, 137px);
       width: 402px;
       height: 137px;

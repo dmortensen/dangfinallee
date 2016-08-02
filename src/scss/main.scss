@@ -50,6 +50,7 @@
 
     &-image {
      @include img-retina("/dist/images/header_wedding.png", "/dist/images/header_wedding_2x.png", 402px, 137px);
+     @include horizontal-center;
      width: 402px;
      height: 137px;
      background-size: 402px 137px;
@@ -74,9 +75,6 @@
 // ============================================
 .page-registry {
   .headline {
-    @include horizontal-center;
-    width: 469px;
-
     .eyebrow {
       top: 3px;
       left: 3px;
@@ -84,6 +82,7 @@
 
     &-image {
       @include img-retina("/dist/images/header_registry.png", "/dist/images/header_registry_2x.png", 469px, 137px);
+      @include horizontal-center;
       width: 469px;
       height: 137px;
       background-size: 469px 137px;

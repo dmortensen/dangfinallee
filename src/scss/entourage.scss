@@ -7,8 +7,7 @@
 .page-entourage {
 
   .headline {
-    width: 478px;
-    margin: 0 -51px 0;
+    margin-bottom: 0;
 
     @media (min-width: $screen-sm-min) {
       width: 100%;
@@ -21,6 +20,7 @@
     }
     .headline-image {
       @include img-retina("/dist/images/header_entourage.png", "/dist/images/header_entourage_2x.png", 478px, 137px);
+      @include horizontal-center;
       width: 478px;
       height: 137px;
       background-size: 478px 137px;
