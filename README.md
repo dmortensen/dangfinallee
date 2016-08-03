@@ -8,17 +8,17 @@ Dang/Lee Wedding site
 
 
 # Pages
-- [ ] Home
-- [ ] Wedding Day
-- [ ] Stay
-- [ ] Entourage
+- [X] Home
+- [X] Wedding Day
+- [X] Stay
+- [X] Entourage
 - [ ] Story
-- [ ] Registry
-- [ ] RSVP
+- [X] Registry
+- [X] RSVP
 
 ## Components
-- [ ] Navbar (drop down all viewports)
-  - [ ] Transformicons (Navicon)
+- [X] Navbar (drop down all viewports)
+  - [X] Transformicons (Navicon)
 - [X] Countdown (Home page)
 - [X] Scroll revealing timeline (Story page)
 
