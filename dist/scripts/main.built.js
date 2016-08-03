@@ -11043,8 +11043,8 @@ proto._getList = function () {
       html += '<label>You\'ll find me on the dance floor when the DJ plays:</label>';
       html += '<div class="text-nowrap"><input class="song underline" type="text" name="song" placeholder="song name" />.</div>';
     } else if ( data.status == 'replied' ) {
-      html = '<p>Looks like you already RSVP\'d. See you Sat, Oct. 1st.</p>';
-      html += '<p>If you need to change your response, please email <a href="mailto:erica.dang@gmail.com">Erica</a>.</p>';
+      html = '<p>Looks like you already RSVP\'d.<br />';
+      html += 'If you need to change your response, please email <a href="mailto:erica.dang@gmail.com">Erica</a>.</p>';
       _this.submitBtn.style.display = 'none';
     } else {
       html = '<p>' + data.status + '</p>';

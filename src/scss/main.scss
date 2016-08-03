@@ -79,6 +79,11 @@ $wedding-headline-lg: (
   .parking {
     max-width: 30.5em;
   }
+
+  .link {
+    color: lighten($color-green, 25%);
+    line-height: 1.8;
+  }
 }
 
 // ============================================
