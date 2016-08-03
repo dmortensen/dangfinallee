@@ -20,7 +20,6 @@ $entourage-headline-lg: (
     width: map-get($entourage-headline-sm, width);
 
     @media (min-width: $screen-xs-min) {
-      @include center;
       width: map-get($entourage-headline-lg, width);
     }
 
@@ -89,6 +88,7 @@ $entourage-headline-lg: (
   }
   p {
     margin-bottom: 5px;
+    padding: 0;
     font-size: 16px;
     line-height: 21px;
 
