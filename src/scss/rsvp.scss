@@ -3,9 +3,24 @@
 // ============================================
 @import "shared/bootstrap-custom";
 
-.page-rsvp {
+$rsvp-headline-sm: (
+  width: 230px,
+  height: 103px
+);
+$rsvp-headline-lg: (
+  width: 315px,
+  height: 137px
+);
 
+.page-rsvp {
   .headline {
+    @include horizontal-center;
+    width: map-get($rsvp-headline-sm, width);
+
+    @media (min-width: $screen-xs-min) {
+      width: map-get($rsvp-headline-lg, width);
+    }
+
     .eyebrow {
       top: 3px;
       left: 3px;
@@ -14,12 +29,9 @@
         top: -15px;
       }
     }
-    .headline-image {
-      @include horizontal-center;
-      @include img-retina("/dist/images/header_rsvp.png", "/dist/images/header_rsvp_2x.png", 402px, 137px);
-      width: 402px;
-      height: 137px;
-      background-size: 402px 137px;
+
+    &-image {
+      @include img-viewport('header_rsvp', $rsvp-headline-sm, $rsvp-headline-lg, 'png');
     }
   }
 
@@ -99,15 +111,9 @@
       }
     }
 
-    &:first-child {
-      .underline:before {
-        content: 'I,';
-        position: absolute;
-        left: -22px;
-      }
-    }
-
     &:last-child {
+      padding-bottom: 20px;
+
       .underline:after {
         content: '';
       }

@@ -21,3 +21,24 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+// Headline Images
+$image-path: '/dist/images' !default;
+@mixin img-viewport($name, $img-sizes-sm, $img-sizes-lg, $file-type: 'jpg') {
+  $sm-width: map-get($img-sizes-sm, width);
+  $sm-height: map-get($img-sizes-sm, height);
+  $lg-width: map-get($img-sizes-lg, width);
+  $lg-height: map-get($img-sizes-lg, height);
+
+  @include img-retina('#{$image-path}/#{$name}_sm.#{$file-type}', '#{$image-path}/#{$name}_sm_2x.#{$file-type}', $sm-width, $sm-height);
+  width: $sm-width;
+  height: $sm-height;
+  background-size: $sm-width $sm-height;
+
+  @media (min-width: $screen-xs-min) {
+    @include img-retina('#{$image-path}/#{$name}.#{$file-type}', '#{$image-path}/#{$name}_2x.#{$file-type}', $lg-width, $lg-height);
+    width: $lg-width;
+    height: $lg-height;
+    background-size: $lg-width $lg-height;
+  }
+}

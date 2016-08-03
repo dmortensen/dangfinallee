@@ -13,7 +13,16 @@
   width: 14px;
   height: 14px;
 }
+
 $paragraph-padding: 31px;
+$story-headline-sm: (
+  width: 216px,
+  height: 103px
+);
+$story-headline-lg: (
+  width: 289px,
+  height: 137px
+);
 
 .page-story {
   .main {
@@ -27,10 +36,7 @@ $paragraph-padding: 31px;
     }
 
     &-image {
-      @include img-retina("/dist/images/header_story.png", "/dist/images/header_story_2x.png", 289px, 137px);
-      width: 289px;
-      height: 137px;
-      background-size: 289px 137px;
+      @include img-viewport('header_story', $story-headline-sm, $story-headline-lg, 'png');
     }
   }
 

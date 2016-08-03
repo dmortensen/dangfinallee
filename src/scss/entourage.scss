@@ -4,26 +4,33 @@
 @import "shared/bootstrap-custom";
 @import "shared/entourage-images";
 
+$entourage-headline-sm: (
+  width: 337px,
+  height: 103px
+);
+$entourage-headline-lg: (
+  width: 478px,
+  height: 137px
+);
+
 .page-entourage {
-
   .headline {
+    @include horizontal-center;
     margin-bottom: 0;
+    width: map-get($entourage-headline-sm, width);
 
-    @media (min-width: $screen-sm-min) {
-      width: 100%;
-      margin: 0 auto;
+    @media (min-width: $screen-xs-min) {
+      @include center;
+      width: map-get($entourage-headline-lg, width);
     }
 
     .eyebrow {
       top: 6px;
       left: 42px;
     }
-    .headline-image {
-      @include img-retina("/dist/images/header_entourage.png", "/dist/images/header_entourage_2x.png", 478px, 137px);
-      @include horizontal-center;
-      width: 478px;
-      height: 137px;
-      background-size: 478px 137px;
+
+    &-image {
+      @include img-viewport('header_entourage', $entourage-headline-sm, $entourage-headline-lg, 'png');
     }
   }
 

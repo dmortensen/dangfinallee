@@ -4,7 +4,6 @@
 // Page: home
 // ============================================
 .page-home {
-
   .main {
     @include background-cover('/dist/images/background_bigsurcliff.jpg');
   }
@@ -37,23 +36,35 @@
 // ============================================
 // Page: wedding-day
 // ============================================
+$wedding-headline-sm: (
+  width: 280px,
+  height: 103px
+);
+$wedding-headline-lg: (
+  width: 402px,
+  height: 137px
+);
+
 .page-wedding-day {
   .main {
     @include background-cover('/dist/images/background_terragallery.jpg');
   }
 
   .headline {
+    @include horizontal-center;
+    width: map-get($wedding-headline-sm, width);
+
+    @media (min-width: $screen-xs-min) {
+      width: map-get($wedding-headline-lg, width);
+    }
+
     .eyebrow {
       top: 20px;
       left: -96px;
     }
 
     &-image {
-     @include img-retina("/dist/images/header_wedding.png", "/dist/images/header_wedding_2x.png", 402px, 137px);
-     @include horizontal-center;
-     width: 402px;
-     height: 137px;
-     background-size: 402px 137px;
+      @include img-viewport('header_wedding', $wedding-headline-sm, $wedding-headline-lg, 'png');
     }
   }
 
@@ -73,19 +84,31 @@
 // ============================================
 // Page: registry
 // ============================================
+$registry-headline-sm: (
+  width: 287px,
+  height: 103px
+);
+$registry-headline-lg: (
+  width: 469px,
+  height: 137px
+);
+
 .page-registry {
   .headline {
+    @include horizontal-center;
+    width: map-get($registry-headline-sm, width);
+
+    @media (min-width: $screen-xs-min) {
+      width: map-get($registry-headline-lg, width);
+    }
+
     .eyebrow {
       top: 3px;
       left: 3px;
     }
 
     &-image {
-      @include img-retina("/dist/images/header_registry.png", "/dist/images/header_registry_2x.png", 469px, 137px);
-      @include horizontal-center;
-      width: 469px;
-      height: 137px;
-      background-size: 469px 137px;
+      @include img-viewport('header_registry', $registry-headline-sm, $registry-headline-lg, 'png');
     }
   }
 
@@ -108,10 +131,16 @@
     @include text-hide;
 
     &-cnb {
-      @include img-retina("/dist/images/crate_and_barrel.jpg", "/dist/images/crate_and_barrel_2x.jpg", 270px, 39px);
-      width: 270px;
-      height: 39px;
-      background-size: 270px 39px;
+      @include img-viewport('crate_and_barrel',
+        $img-sizes-sm: (
+          width: 162px,
+          height: 24px
+        ),
+        $img-sizes-lg: (
+          width: 270px,
+          height: 39px
+        )
+      );
       margin-bottom: 30px;
 
       @media (min-width: $screen-sm-min) {
@@ -119,10 +148,16 @@
       }
     }
     &-macys {
-      @include img-retina("/dist/images/macys.jpg", "/dist/images/macys_2x.jpg", 270px, 74px);
-      width: 270px;
-      height: 74px;
-      background-size: 270px 74px;
+      @include img-viewport('macys',
+        $img-sizes-sm: (
+          width: 162px,
+          height: 45px
+        ),
+        $img-sizes-lg: (
+          width: 270px,
+          height: 74px
+        )
+      );
     }
   }
 }
@@ -131,11 +166,17 @@
 // ============================================
 // Page: hotel
 // ============================================
+$hotel-headline-sm: (
+  width: 193px,
+  height: 103px
+);
+$hotel-headline-lg: (
+  width: 275px,
+  height: 137px
+);
+
 .page-hotel {
   .headline-image {
-    @include img-retina("/dist/images/header_hotel.png", "/dist/images/header_hotel_2x.png", 275px, 137px);
-    width: 275px;
-    height: 137px;
-    background-size: 275px 137px;
+    @include img-viewport('header_hotel', $hotel-headline-sm, $hotel-headline-lg, 'png');
   }
 }
